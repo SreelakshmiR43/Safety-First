@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="css/main.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+   
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+
+      <form  id="form" name="form"  action="register.php" method="post" autocomplete="off">
+        
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">First Name</span>
+            <input type="text" id="fname" onkeyup="fnameValidation(this)" name="first_name" placeholder="Enter your firstname" required >
+            <span id="fame" class="new" style="color: red; font-size: small;"></span>
+          </div>
+
+          <div class="input-box">
+            <span class="details">Last Name</span>
+            <input type="text" id="lname" onkeyup="lnameValidation(this)" name="last_name" placeholder="Enter your lastname" required>
+            <span id="lame" class="new"class="new" style="color: red; font-size: small;"></span>
+          </div>
+          <div class="input-box">
+            <span class="details">Email</span>
+            <input type="email" id="email" onkeyup="emailValidation(this)" name="email" placeholder="Enter your email"  required>
+            <span id="mail" class="new" style="color: red; font-size: small;"></span>
+
+          </div>
+          <div class="input-box">
+            <span class="details">Phone Number</span>
+            <input type="phone" id="phn_no" onkeyup="phn_noValidation(this)" maxlength="10" name="phn_no" placeholder="Enter your number" required >
+            <span id="phn" class="new" class="new" style="color: red; font-size: small;"></span>
+          </div>
+          
+            <div class="input-box">
+             <span class="details"> Date of Birth</span>
+             <input type="date" id="dob" name="dob" placeholder="Enter date" min="1900-01-01" max="2022-01-01" required  >
+             <span id="dofb" class="new"class="new" style="color: red; font-size: small;"></span>
+           </div>
+        
+          <div class="input-box">
+            <span class="details">Aadhar number</span>
+            <input type="text" id="aadhar_no" onkeyup="aadhar_noValidation(this)" name="aadhar_no" placeholder="Enter your Aadhar number" required>
+            <span id="aadharno" class="new"class="new" style="color: red; font-size: small;"></span>
+          </div>
+        </div>
+         
+        
+        
+        <div class="gender-details">
+          <input type="radio" name="gender" checked id="dot-1" required>
+          <input type="radio" name="gender" id="dot-2" >
+          <input type="radio" name="gender" id="dot-3" >
+          <span class="gender-title" >Gender</span>
+          <div class="category">
+            <label for="dot-1">
+            <span class="dot one"></span>
+            <span class="gender" >Male</span>
+          </label>
+          <label for="dot-2">
+            <span class="dot two"></span>
+            <span class="gender">Female</span>
+          </label>
+          <label for="dot-3">
+            <span class="dot three"></span>
+            <span class="gender">Prefer not to say</span>
+            </label>
+          </div>
+        </div>
+
+<!--address-->
+    <div class="user-details">
+        <div class="input-box">
+         <span class="details">House Name</span>
+             <input type="text" id="house_name" onkeyup="house_nameValidation(this)"  name="house_name" placeholder="Enter your housename" required >
+             <span id="hame" class="new"  class="new" style="color: red; font-size: small;"></span>
+        </div>
+         <div class="input-box">
+            <span class="details">City</span>
+            <input type="text" id="city" name="city" onkeyup="cityValidation(this)" placeholder="Enter your city" required >
+            <span id="cty" class="new" class="new" style="color: red; font-size: small;"></span>
+        </div>
+        
+        <div class="input-box">
+            <span class="details">Post Office</span>
+            <input type="text" id="post_office" onkeyup="post_officeValidation(this)" name="post_office" placeholder="Enter  post office" required>
+            <span id="po" class="new" class="new" style="color: red; font-size: small;"></span>
+          </div>
+          <div class="input-box">
+            <span class="details">Pin code</span>
+            <input type="varchar" id="pin_code" maxlength="6" onkeyup="pin_codeValidation(this)" name="pin_code" placeholder="Enter pin code " required>
+            <span id="pc" class="new" class="new" style="color: red; font-size: small;"></span>
+          </div>
+    </div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="password" onkeyup="passwordValidation(this)" name="password" placeholder="Enter  your password" required>
+            <span id="pwd" class="new" class="new" style="color: red; font-size: small;"></span>
+          
+          </div>
+          <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="cpassword" onkeyup="cpasswordValidation(this)" name="cpassword" placeholder="Enter Confirm Password " required >
+            <span id="pwd1" class="new" class="new" style="color: red; font-size: small;"></span>
+          </div>
+    </div>
+    
+        <div class="button">
+          <input type="submit" name="register" value="Register" >
+          
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+  <script>
+
+    // First name //
+
+    function fnameValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z]+$/;
+     var textField = document.getElementById("fame");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+    }
+
+ //Last name
+
+
+    function lnameValidation(inputTxt){
+    
+    var regx = /^[a-zA-Z]+$/;
+    var textField = document.getElementById("lame");
+        
+    if(inputTxt.value != '' ){
+    
+        if(inputTxt.value.length >= 1){
+        
+            if(inputTxt.value.match(regx)){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'only characters are allowded to insert!';
+                textField.style.color = "red";
+            }  
+        }else{
+            textField.textContent = 'your input must me more than two chracters';
+            textField.style.color = "red";
+        }   
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+
+//email//
+
+function emailValidation(inputTxt){
+    // ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+    var regx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    var textField = document.getElementById("mail");
+        
+    if(inputTxt.value != '' ){
+        if(inputTxt.value.match(regx)){
+            textField.textContent = '';
+            textField.style.color = "green";
+        }else{
+            textField.textContent = 'email id  is not valid!!! please insert a valid one';
+            textField.style.color = "red";
+        }  
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+
+//pwd//
+
+function passwordValidation(inputTxt){
+    
+    var regx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}/;
+    var textField = document.getElementById("pwd");
+        
+    if(inputTxt.value != '' ){
+            if(inputTxt.value.match(regx)){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'Must contain at least one number and one uppercase and lowercase letter and aleast 5 characters';
+                textField.style.color = "red";
+            }    
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+
+//cpwd//
+
+function cpasswordValidation(inputTxt){
+    
+    var regx =  document.getElementById("pwd").value;
+    var regy =  document.getElementById("pwd1").value;
+    var textField = document.getElementById("pwd1");
+    var textField1 = document.getElementById("pwd");
+        
+    if(inputTxt.value != '' ){    
+            if(regx == regy){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'Entered to passwords are not same!!';
+                textField.style.color = "red";
+            }  
+        }else{
+            textField.textContent = '';
+            textField.style.color = "red";
+        }  
+}
+
+//aadhar//
+
+function aadhar_noValidation(inputTxt){
+   
+    var regx = /^[2-9]{1}[0-9]{3}\s{1}[0-9]{4}\s{1}[0-9]{4}$/;
+    var textField = document.getElementById("aadharno");
+        
+    if(inputTxt.value != '' ){
+        if(inputTxt.value.match(regx)){
+            textField.textContent = '';
+            textField.style.color = "green";
+        }else{
+            textField.textContent = 'Your aadhar number  is not valid!!! please provide space after 4 digits';
+            textField.style.color = "red";
+        }  
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+
+//number //
+
+function phn_noValidation(inputTxt){
+   
+   var regx = /^\d{10}$/;
+   var textField = document.getElementById("phn");
+       
+   if(inputTxt.value != '' ){
+       if(inputTxt.value.match(regx)){
+           textField.textContent = '';
+           textField.style.color = "green";
+       }else{
+           textField.textContent = 'Your Mobile Number Is Not Valid.';
+           textField.style.color = "red";
+       }  
+   }else{
+       textField.textContent = 'your are not allowed  to leave a field  empty';
+       textField.style.color = "red";
+   }
+}
+
+
+//house//
+
+function house_nameValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z]+$/;
+     var textField = document.getElementById("hame");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+  }
+
+//city//
+
+    function cityValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z]+$/;
+     var textField = document.getElementById("cty");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+ }
+
+ //POffice//
+
+
+    function post_officeValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z]+$/;
+     var textField = document.getElementById("po");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+    }
+
+    //pc//
+    function pin_codeValidation(inputTxt){
+   
+   var regx = /^\d{6}$/;
+   var textField = document.getElementById("pc");
+       
+   if(inputTxt.value != '' ){
+       if(inputTxt.value.match(regx)){
+           textField.textContent = '';
+           textField.style.color = "green";
+       }else{
+           textField.textContent = 'Your Pin code Is not Valid.';
+           textField.style.color = "red";
+       }  
+   }else{
+       textField.textContent = 'your are not allowed  to leave a field  empty';
+       textField.style.color = "red";
+   }
+}
+
+
+
+</script>
+</body>
+</html>

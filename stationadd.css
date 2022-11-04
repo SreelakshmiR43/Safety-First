@@ -1,0 +1,65 @@
+* {
+    padding:0;
+    margin:0;
+    box-sizing: border-box;
+  
+  }
+  
+  
+  body {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+  }
+  
+  #create-account-form {
+    width:100%;
+    padding:20px;
+    text-transform: uppercase;
+    background-color: rgb(235, 192, 172);
+  }
+  .container{
+    max-width: 1000px;
+    width:500px;
+    height: 650px;
+    background-color: rgb(188, 177, 177);
+    padding: 25px 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.15);
+  }
+  .container .title{
+    font-size: 20px;
+    font-weight: 900;
+    position:relative;
+  }
+  .input-group {
+    margin:20px 0; 
+    position:relative;
+  }
+  
+  .input-group label {
+    display:inline-block;
+    margin-bottom: 5px;
+    
+  }
+  
+  .input-group input {
+    display:block;
+    width:100%;
+    padding:10px;   
+  }
+  
+ 
+  
+  .btn {
+     width:100%;
+     padding:10px;
+     font-size: 15px;
+     background-color: blue;
+     color:#fff;
+     text-transform: uppercase;
+     border:none;
+  }
+  

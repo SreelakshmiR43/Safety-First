@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <title> POLICE STATION </title>
+   
+    <link rel="stylesheet" href="police_station.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
+		<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+
+    <script src="https://kit.fontawesome.com/2bbac3a66c.js" crossorigin="anonymous" ></script>
+
+  
+</head>
+<body> 
+             
+    
+
+
+    <form id="create-account-form"  action="police_station_add.php" autocomplete="off" method="POST">
+       
+        
+        <div class="title">
+            <h2> POLICE STATION</h2>
+        </div>
+		
+        
+        
+        <div class="input-group">
+            <label for="name">Station Name</label>
+            <input type="text" id="station_name" onkeyup="stnameValidation(this)" name="station_name" placeholder="Station Name" required>
+            <span id="sname" class="new" style="color: red; font-size: small;"></span>
+            </div>
+        
+        <div class="input-group">
+            <label for="district">District:</label>
+            <select id="district" name="district"  style="width: 460px;height: 40px;" >
+                <option value="Kottayam">Kottayam</option>
+              
+            </select>
+        </div>
+
+        <div class="input-group">
+            <label for="city">City</label>
+            <input type="text" id="city" onkeyup="cityValidation(this)" name="city" placeholder="City" required>
+            <span id="cty" class="new" style="color: red; font-size: small;"></span>
+          
+        </div>
+
+        <div class="input-group">
+            <label for="circle">Circle Inspector</label>
+            <input type="text" id="circle" onkeyup="circleValidation(this)" name="circle" placeholder="Circle Inspector name" required>
+            <span id="crc" class="new" style="color: red; font-size: small;"></span>
+        </div>
+            <div class="input-group">
+            <label for="phone">Phone Number</label>
+            <input type="phone" id="phn_no" onkeyup="mobValidation(this)" maxlength="10" name="phn_no" placeholder="Phone Number " required>
+            <span id="mob" class="new" style="color: red; font-size: small;"></span>
+          
+            </div>
+
+        <div class="input-group">
+            <label for="mail">Station Email</label>
+            <input type="email" id="station_mail" onkeyup="stmailValidation(this)" name="station_mail" placeholder="Station Email" required>
+            <span id="smail" class="new" style="color: red; font-size: small;"></span>
+        </div>
+       
+       
+        <button type="submit" name="submit"class="btn">Add</button>
+   
+    </form>
+
+
+
+
+    <!-- JAVASCRIPT
+    <script src="#"></script>  -->
+    <script>
+function stnameValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z]+$/;
+     var textField = document.getElementById("sname");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+    }
+
+    function cityValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z]+$/;
+     var textField = document.getElementById("cty");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+    }
+    function cityValidation(inputTxt){
+    
+    var regx = /^[a-zA-Z]+$/;
+    var textField = document.getElementById("cty");
+        
+    if(inputTxt.value != '' ){
+    
+        if(inputTxt.value.length >= 2){
+        
+            if(inputTxt.value.match(regx)){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'only characters are allowded to insert!';
+                textField.style.color = "red";
+            }  
+        }else{
+            textField.textContent = 'your input must more than two chracters';
+            textField.style.color = "red";
+        }   
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+function circleValidation(inputTxt){
+    
+    var regx = /^[a-zA-Z]+$/;
+    var textField = document.getElementById("crc");
+        
+    if(inputTxt.value != '' ){
+    
+        if(inputTxt.value.length >= 2){
+        
+            if(inputTxt.value.match(regx)){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'only characters are allowded to insert!';
+                textField.style.color = "red";
+            }  
+        }else{
+            textField.textContent = 'your input must more than two chracters';
+            textField.style.color = "red";
+        }   
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+function mobValidation(inputTxt){
+   
+    var regx = /^\d{10}$/;  
+    var textField = document.getElementById("mob");
+        
+    if(inputTxt.value != '' ){
+        if(inputTxt.value.match(regx)){
+            textField.textContent = '';
+            textField.style.color = "green";
+        }else{
+            textField.textContent = 'Your phone number is not valid!!! please insert a valid one';
+            textField.style.color = "red";
+        }  
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+function stmailValidation(inputTxt){
+    // ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+    var regx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    var textField = document.getElementById("smail");
+        
+    if(inputTxt.value != '' ){
+        if(inputTxt.value.match(regx)){
+            textField.textContent = '';
+            textField.style.color = "green";
+        }else{
+            textField.textContent = 'email id  is not valid!!! please insert a valid one';
+            textField.style.color = "red";
+        }  
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+
+
+    </script>
+  
+</body>
+
+</html>
+
+
+
+
+
