@@ -41,7 +41,7 @@ if(isset($_POST['submit']))
     else if($_SESSION['role']=='station')
     {
       $_SESSION['message']="Welcome";
-       header("location:#");
+       header("location:policehome.php");
       exit(0);
     }
 }

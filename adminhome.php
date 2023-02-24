@@ -1,11 +1,13 @@
 <?php
 session_start();
-if($_SESSION['email']){
-}else{
-    header("location:index.html");
-}
-?>
 
+if($_SESSION['email']){
+}
+else{
+        header('Location: login2.html');
+        
+    }
+?>
 <!DOCTYPE html>
 <!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
 <html lang="en" dir="ltr">
@@ -22,7 +24,7 @@ if($_SESSION['email']){
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">True Crime</span>
+      <span class="logo_name">Safety First</span>
     </div>
       <ul class="nav-links">
         <li>
@@ -34,16 +36,57 @@ if($_SESSION['email']){
         <li>
           <a href="policeadddisplay.php">
             <i class='bx bx-box' ></i>
-            <span class="links_name">Add Police Station</span>
+            <span class="links_name">Police Station</span>
           </a>
         </li>
         <li>
-          <a href="newsadddisplay.php">
+          <a href="#">
             <i class='bx bx-list-ul' ></i>
-            <span class="links_name">Add News</span>
+            <span class="links_name">Category</span>
           </a>
         </li>
-    
+        <li>
+          <a href="#">
+            <i class='bx bx-pie-chart-alt-2' ></i>
+            <span class="links_name">Sub-Category</span>
+          </a>
+        </li>
+        <!-- <li>
+          <a href="#">
+            <i class='bx bx-coin-stack' ></i>
+            <span class="links_name"></span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-book-alt' ></i>
+            <span class="links_name">Total order</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-user' ></i>
+            <span class="links_name">Teachers</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-message' ></i>
+            <span class="links_name">Messages</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class='bx bx-heart' ></i>
+            <span class="links_name">Favrorites</span>
+          </a>
+        </li> -->
+        <li>
+          <a href="#">
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Setting</span>
+          </a>
+        </li>
         <li class="log_out">
           <a href="logout.php">
             <i class='bx bx-log-out'></i>

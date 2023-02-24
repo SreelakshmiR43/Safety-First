@@ -6,6 +6,7 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+
 .sidebar{
   position: fixed;
   height: 100%;
@@ -13,7 +14,7 @@
  /* background: #8e44ad;
   background: #FFEFD5;
   /*transition: all 0.5s ease;*/
-  background: linear-gradient(120deg,#e68a71, #ff821b);
+  background: linear-gradient(120deg,orange));
   height: 100vh;
   overflow: hidden;
 }
@@ -54,10 +55,10 @@
   transition: all 0.4s ease;
 }
 .sidebar .nav-links li a.active{
-  background: #e68a71, #ff821b;
+  background: #FFEFD5 , orange;
 }
 .sidebar .nav-links li a:hover{
-  background: #e68a71, #ff821b;
+  background: #FFEFD5 , orange;
 }
 .sidebar .nav-links li i{
   min-width: 60px;
@@ -349,7 +350,7 @@ nav .profile-details i{
 .price{
   font-size: 17px;
   font-weight: 400;
-  color: #e68a71, #ff821b;
+  color: #FFEFD5 , #8e44ad;
 }
 /* Responsive Media Query */
 @media (max-width: 1240px) {

@@ -1,27 +1,136 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title> POLICE STATION </title>
-   
-    <link rel="stylesheet" href="police_station.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-		<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="styleA.css">
+    <title>ADMIN PANEL</title>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+   <style>
+    * {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+body {
+ 
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+}
 
-    <script src="https://kit.fontawesome.com/2bbac3a66c.js" crossorigin="anonymous" ></script>
+#create-account-form {
+     width: 1300px;
+    height: 900px; 
+    padding:24px;
+  background-color: #fff;
+}
 
-  
-</head>
-<body> 
-             
-    
+.title {
+  margin-bottom: 20px;
+  font-size: 20x;
+  font-weight: bold;
+  position: relative;
+  padding: 60px 0 ;
+  height: 100px;
+ 
+}
+
+.input-group {
+  margin:15px 0; 
+  position:relative;
+ }
+
+.input-group label {
+  display:inline-block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  display:block;
+  width: 700px;
+  padding:10px;   
+}
 
 
+.btn {
+   width: 100px;;
+   padding:5px;
+   font-size: 20px;
+   background-color: orange;
+   color:#fff;
+   text-transform: uppercase;
+   border:none;
+}
+</style>
+
+<body>
+    <div class="sidebar">
+        <div class="logo-details">
+          <i class='bx bxl-c-plus-plus'></i>
+          <span class="logo_name">Safety First</span>
+        </div>
+        <ul class="nav-links">
+            <li>
+              <a href="#" class="active">
+                <i class='bx bx-grid-alt' ></i>
+                <span class="links_name">Dashboard</span>
+              </a>
+            </li>
+            <li>
+              <a href="police_station_add.html">
+                <i class='bx bx-box' ></i>
+                <span class="links_name">Police Station</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-list-ul' ></i>
+                <span class="links_name">Category</span>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <i class='bx bx-pie-chart-alt-2' ></i>
+                <span class="links_name">Sub-Category</span>
+              </a>
+            </li>
+            <li>
+                <a href="#">
+                  <i class='bx bx-cog' ></i>
+                  <span class="links_name">Setting</span>
+                </a>
+              </li>
+        
+            <li class="log_out">
+              <a href="logout.php">
+                <i class='bx bx-log-out'></i>
+                <span class="links_name">Log out</span>
+              </a>
+            </li>
+          </ul>
+      </div>
+  <section class="home-section">
+    <nav>
+      <div class="sidebar-button">
+        <i class='bx bx-menu sidebarBtn'></i>
+        <span class="dashboard">Dashboard</span>
+      </div>
+      <div class="search-box">
+        <input type="text" placeholder="Search">
+        <i class='bx bx-search' ></i>
+      </div>
+      <div class="profile-details">
+        <img src="images/profile/profileuser.png"   >
+        <span class="admin_name">Admin</span>
+        </div>
+    </nav>
     <form id="create-account-form"  action="police_station_add.php" autocomplete="off" method="POST">
        
         
@@ -37,27 +146,21 @@
             <span id="sname" class="new" style="color: red; font-size: small;"></span>
             </div>
         
+            <div class="input-group">
+                <label for="mail">Station Email</label>
+                <input type="email" id="station_mail" onkeyup="stmailValidation(this)" name="station_mail" placeholder="Station Email" required>
+                <span id="smail" class="new" style="color: red; font-size: small;"></span>
+            </div>
+        </div>
         <div class="input-group">
-            <label for="district">District:</label>
+            <label for="district">District:</label><br>
             <select id="district" name="district"  style="width: 460px;height: 40px;" >
                 <option value="Kottayam">Kottayam</option>
               
             </select>
         </div>
-
+         
         <div class="input-group">
-            <label for="city">City</label>
-            <input type="text" id="city" onkeyup="cityValidation(this)" name="city" placeholder="City" required>
-            <span id="cty" class="new" style="color: red; font-size: small;"></span>
-          
-        </div>
-
-        <div class="input-group">
-            <label for="circle">Circle Inspector</label>
-            <input type="text" id="circle" onkeyup="circleValidation(this)" name="circle" placeholder="Circle Inspector name" required>
-            <span id="crc" class="new" style="color: red; font-size: small;"></span>
-        </div>
-            <div class="input-group">
             <label for="phone">Phone Number</label>
             <input type="phone" id="phn_no" onkeyup="mobValidation(this)" maxlength="10" name="phn_no" placeholder="Phone Number " required>
             <span id="mob" class="new" style="color: red; font-size: small;"></span>
@@ -65,21 +168,24 @@
             </div>
 
         <div class="input-group">
-            <label for="mail">Station Email</label>
-            <input type="email" id="station_mail" onkeyup="stmailValidation(this)" name="station_mail" placeholder="Station Email" required>
-            <span id="smail" class="new" style="color: red; font-size: small;"></span>
+            <label for="station_incharge">Station Incharge</label>
+            <input type="text" id="station_incharge" onkeyup="" name="station_incharge" placeholder="Inspector name" required>
+            <span id="crc" class="new" style="color: red; font-size: small;"></span>
         </div>
+            
+
        
        
         <button type="submit" name="submit"class="btn">Add</button>
+        
+   
    
     </form>
 
 
 
-
-    <!-- JAVASCRIPT
-    <script src="#"></script>  -->
+<!-- 
+     
     <script>
 function stnameValidation(inputTxt){
      
@@ -224,7 +330,7 @@ function stmailValidation(inputTxt){
 }
 
 
-    </script>
+    </script> -->
   
 </body>
 

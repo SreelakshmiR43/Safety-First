@@ -22,9 +22,15 @@ if($_SESSION['email']){
   <div class="sidebar">
     <div class="logo-details">
       <i class='bx bxl-c-plus-plus'></i>
-      <span class="logo_name">True Crime</span>
+     <span class="logo_name"> Safety First</span>
     </div>
       <ul class="nav-links">
+      <li>
+            <a href="index.html" class="active">
+              <i class='bx bx-home-alt' ></i>
+              <span class="links_name">Home</span>
+            </a>
+          </li>
         <li>
           <a href="#" class="active">
             <i class='bx bx-grid-alt' ></i>
@@ -32,18 +38,12 @@ if($_SESSION['email']){
           </a>
         </li>
         <li>
-          <a href="policeadddisplay.php">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">abc</span>
+          <a href="complaintadddisplay.php">
+            <i class='bx bx-file' ></i>
+            <span class="links_name">Register Complaint </span>
           </a>
         </li>
-        <li>
-          <a href="#">
-            <i class='bx bx-list-ul' ></i>
-            <span class="links_name">abc</span>
-          </a>
-        </li>
-    
+        
         <li class="log_out">
           <a href="logout.php">
             <i class='bx bx-log-out'></i>
@@ -63,8 +63,8 @@ if($_SESSION['email']){
         <i class='bx bx-search' ></i>
       </div>
       <div class="profile-details">
-        <img src="images/profile.jpg" alt="">
-        <span class="admin_name">Admin</span>
+        <img src="images/profile/profileuser.png" alt="">
+        <span class="user_name">User</span>
         <i class='bx bx-chevron-down' ></i>
       </div>
     </nav>

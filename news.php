@@ -16,11 +16,11 @@ if(isset($_POST["submit"]))
     if($sql)
       {
        
-    echo "<script>alert('News Added Successfully!!');window.location='adminhome.php'</script>";
+    echo "<script>alert('News Added Successfully!!');window.location='policehome.php'</script>";
       }
     else
       {
-    echo "<script>alert('Error');window.location='adminhome.php'</script>";
+    echo "<script>alert('Error');window.location='policehome.php'</script>";
       }
     }
     
@@ -29,26 +29,144 @@ if(isset($_POST["submit"]))
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<!-- Designined by CodingLab | www.youtube.com/codinglabyt -->
+<html lang="en" dir="ltr">
+  <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   
-    <title>NEWS </title>
-   
-    <link rel="stylesheet" href="css/news.css">
-    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
-		<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/themes/bootstrap.min.css"/>
-		<script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
+    <link rel="stylesheet" href="styleA.css">
+    <title>NEWS DISPLAY</title>
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <style>
+     * {
+  padding:0;
+  margin:0;
+  box-sizing: border-box;
+ font-family: 'Poppins', sans-serif;
+}
+body {
+ 
+  justify-content: center;
+  align-items: center;
+  min-height: 190vh;
+  background-color: #fff;
+}
 
-    <script src="https://kit.fontawesome.com/2bbac3a66c.js" crossorigin="anonymous" ></script>
+#create-account-form {
+     width: 100%;
+    height: 900px; 
+    padding:25px;
+  background-color: #fff;
+}
 
-  
-</head>
-<body> 
-	<form id="create-account-form"  action="#"  autocomplete="off" method="POST">
+.title {
+  margin-bottom: 20px;
+  font-size: 20x;
+  font-weight: bold;
+  position: relative;
+  padding: 60px 0 ;
+  height: 100px;
+ 
+}
+
+.input-group {
+  margin:15px 0; 
+  position:relative;
+ }
+
+.input-group label {
+  display:inline-block;
+  margin-bottom: 5px;
+}
+
+.input-group input {
+  display:block;
+  width: 700px;
+  padding:10px;   
+}
+.btn{
+   width: 100px;;
+   padding:5px;
+   font-size: 20px;
+   background-color: orange;
+   color:#fff;
+   text-transform: uppercase;
+   border:none;
+}
+</style>
+
+<body>
+    <div class="sidebar">
+      <div class="logo-details">
+        <i class='bx bxl-c-plus-plus'></i>
+        <span class="logo_name">True Crime</span>
+      </div>
+        <ul class="nav-links">
+        <li>
+            <a href="index.html" class="active">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Home</span>
+            </a>
+          </li>
+          <li>
+            <a href="#" class="active">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Dashboard</span>
+            </a>
+          </li>
+          <li>
+            <a href="complaintview.php">
+              <i class='bx bx-file' ></i>
+              <span class="links_name">View Complaint</span>
+            </a>
+          </li>
+          <li>
+            <a href="firdisplay.php">
+              <i class='bx bx-file'  ></i>
+              <span class="links_name">FIR</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i class='bx bx-file'  ></i>
+              <span class="links_name">Crime Details</span>
+            </a>
+          </li>
+          <li>
+          <a href="newsadddisplay.php">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Add News</span>
+          </a>
+        </li>
+       
+          <li class="log_out">
+            <a href="logout.php">
+              <i class='bx bx-log-out'></i>
+              <span class="links_name">Log out</span>
+            </a>
+          </li>
+        </ul>
+    </div>
+    <section class="home-section">
+      <nav>
+        <div class="sidebar-button">
+          <i class='bx bx-menu sidebarBtn'></i>
+          <span class="dashboard">Dashboard</span>
+        </div>
+        <div class="search-box">
+          <input type="text" placeholder="Search">
+          <i class='bx bx-search' ></i>
+        </div>
+        <div class="profile-details">
+          <img src="images/profile/profileuser.png" alt="">
+          <span class="admin_name">Police Station</span>
+          <i class='bx bx-chevron-down' ></i>
+        </div>
+      </nav>
+
+	<form id="create-account-form"  action="#"  autocomplete="off" method="POST" enctype="multipart/form-data">
 		  <div class="title">
             <h2>Add News </h2>
 		 </div>
@@ -63,8 +181,8 @@ if(isset($_POST["submit"]))
 				<span id="crc" class="new" style="color: red; font-size: small;"></span>
 			</div>
         <div class="input-group">
-            <label for="description">News Description</label>
-            <textarea type="text" id="newsdes" onkeyup="ndValidation(this)" name="newsdes" row="4" cols="47" placeholder="News Description" required></textarea>
+            <label for="description">News Description</label><br>
+            <textarea cols="50" rows="10" type="text" id="newsdes" onkeyup="ndValidation(this)" name="newsdes" row="4" cols="47" placeholder="News Description" required></textarea>
             <span id="newsd" class="new" style="color: red; font-size: small;"></span>
          </div>
         <div class="input-group">

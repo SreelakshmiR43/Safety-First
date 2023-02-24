@@ -50,7 +50,7 @@ else
     </div>
    
     <div class="input-group">
-    <input type="hidden"name="news_id" value="<?= $row['news_id'] ?>">
+    <input type="hidden" name="news_id" value="<?= $row['news_id'] ?>">
        <div class="input-group">
           <label>News Title</label>
           <input type="text" class="input" name="news_title" placeholder="News Title" value="<?= $row['news_title'] ?>" required>

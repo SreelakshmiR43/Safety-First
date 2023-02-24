@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<!-- Created By CodingLab - www.codinglabweb.com -->
+<html lang="en" dir="ltr">
+  <head>
+    
+    <meta charset="UTF-8">
+    <!---<title> Responsive Registration Form | CodingLab </title>--->
+    <link rel="stylesheet" href="smain.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   </head>
+<body>
+   
+  <div class="container">
+    <div class="title">Registration</div>
+    <div class="content">
+
+      <form  id="form" name="form"  action="stationreg.php" method="post" >
+        
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Station Name</span>
+            <input type="text" id="ps_name" onkeyup="psValidation(this)" name="ps_name" placeholder="Enter your staion name" required >
+            <span id="ps" class="new" style="color: red; font-size: small;"></span>
+          </div>
+        </div>
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Station Email</span>
+            <input type="email" id="station_email" onkeyup="emailValidation(this)" name="station_email" placeholder="Enter your email"  required>
+            <span id="psmail" class="new" style="color: red; font-size: small;"></span>
+
+        </div>
+    </div>
+  
+        <div class="user-details">
+          <div class="input-box">
+            <span class="details">Password</span>
+            <input type="password" id="ps_password" onkeyup="passwordValidation(this)" name="password" placeholder="Enter  your password" required>
+            <span id="pwd" class="new" class="new" style="color: red; font-size: small;"></span>
+        </div>
+        </div>
+        <div class="user-details">
+        <div class="input-box">
+            <span class="details">Confirm Password</span>
+            <input type="password" id="cpassword" onkeyup="cpasswordValidation(this)" name="cpassword" placeholder="Enter Confirm Password " required >
+            <span id="pwd1" class="new" class="new" style="color: red; font-size: small;"></span>
+          </div>
+        </div>
+        <div class="button">
+          <input type="submit" name="register" value="Register" >
+          
+        </div>
+      </form>
+    </div>
+  </div>
+ 
+ <script>
+
+    // First name //
+
+    function psValidation(inputTxt){
+     
+     var regx = /^[a-zA-Z0-9]+$/;
+     var textField = document.getElementById("ps");
+         
+     if(inputTxt.value != '' ){
+     
+         if(inputTxt.value.length >= 2){
+         
+             if(inputTxt.value.match(regx)){
+                 textField.textContent = '';
+                 textField.style.color = "green";
+                     
+             }else{
+                 textField.textContent = 'only characters are allowded to insert!';
+                 textField.style.color = "red";
+             }  
+         }else{
+             textField.textContent = 'your input must more than two chracters';
+             textField.style.color = "red";
+         }   
+     }else{
+         textField.textContent = 'your are not allowed  to leave a field  empty';
+         textField.style.color = "red";
+     }
+    }
+
+
+//email//
+
+function emailValidation(inputTxt){
+    // ^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$
+    var regx = /^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/;
+    var textField = document.getElementById("psmail");
+        
+    if(inputTxt.value != '' ){
+        if(inputTxt.value.match(regx)){
+            textField.textContent = '';
+            textField.style.color = "green";
+        }else{
+            textField.textContent = 'email id  is not valid!!! please insert a valid one';
+            textField.style.color = "red";
+        }  
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+
+//pwd//
+
+function passwordValidation(inputTxt){
+    
+    var regx = /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{5,}/;
+    var textField = document.getElementById("pwd");
+        
+    if(inputTxt.value != '' ){
+            if(inputTxt.value.match(regx)){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'Must contain at least one number and one uppercase and lowercase letter and aleast 5 characters';
+                textField.style.color = "red";
+            }    
+    }else{
+        textField.textContent = 'your are not allowed  to leave a field  empty';
+        textField.style.color = "red";
+    }
+}
+function cpasswordValidation(inputTxt){
+    
+    var regx =  document.getElementById("pwd").value;
+    var regy =  document.getElementById("pwd1").value;
+    var textField = document.getElementById("pwd1");
+    var textField1 = document.getElementById("pwd");
+        
+    if(inputTxt.value != '' ){    
+            if(regx == regy){
+                textField.textContent = '';
+                textField.style.color = "green";
+                    
+            }else{
+                textField.textContent = 'Entered to passwords are not same!!';
+                textField.style.color = "red";
+            }  
+        }else{
+            textField.textContent = '';
+            textField.style.color = "red";
+        }  
+}
+
+
+</script> 
+</body>
+</html>

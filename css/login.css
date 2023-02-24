@@ -11,14 +11,14 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-color: #fff;
+  background-color: white;
 }
 
 #create-account-form {
-  width:400px;
+  width:300px;
   padding:20px;
-  text-transform: uppercase;
-  background-color: #fff;
+  text-transform:none; 
+  background-color: #f6f0f0;
 }
 
 .title {
@@ -81,8 +81,8 @@ body {
 .btn {
    width:100%;
    padding:10px;
-   font-size: 20px;
-   background-color: green;
+   font-size: 15px;
+   background-color:orange;
    color:#fff;
    text-transform: uppercase;
    border:none;
