@@ -77,12 +77,12 @@ body {
           <span class="logo_name">Safety First</span>
         </div>
         <ul class="nav-links">
-            <li>
-                <a href="index.html" class="active">
-                  <i class='bx bx-grid-alt' ></i>
-                  <span class="links_name">Home</span>
-                </a>
-              </li>
+          <li>
+            <a href="index.html" class="active">
+              <i class='bx bx-grid-alt' ></i>
+              <span class="links_name">Home</span>
+            </a>
+          </li>
             <li>
               <a href="#" class="active">
                 <i class='bx bx-grid-alt' ></i>
@@ -96,7 +96,7 @@ body {
               </a>
             </li>
             <li>
-                <a href="police_officers.php">
+                <a href="police_station_add.html">
                   <i class='bx bx-box' ></i>
                   <span class="links_name">Police Officers</span>
                 </a>
@@ -143,48 +143,56 @@ body {
         <span class="admin_name">Admin</span>
         </div>
     </nav>
-    <form id="create-account-form"  action="police_station_add.php" autocomplete="off" method="POST">
+    <form id="create-account-form"  action="police_officer_add.php" autocomplete="off" method="POST">
        
         
         <div class="title">
-            <h2> POLICE STATION</h2>
+            <h2> Police Officers</h2>
         </div>
 		
         
         
         <div class="input-group">
-            <label for="name">Station Name</label>
-            <input type="text" id="station_name" onkeyup="stnameValidation(this)" name="station_name" placeholder="Station Name" required>
-            <span id="sname" class="new" style="color: red; font-size: small;"></span>
+            <label for="name">Rank</label>
+            <input type="text" id="rank" onkeyup="rankValidation(this)" name="rank" placeholder="Officer's Rank" required>
+            <span id="rname" class="new" style="color: red; font-size: small;"></span>
             </div>
         
             <div class="input-group">
-                <label for="mail">Station Email</label>
-                <input type="email" id="station_mail" onkeyup="stmailValidation(this)" name="station_mail" placeholder="Station Email" required>
-                <span id="smail" class="new" style="color: red; font-size: small;"></span>
+                <label for="mail">Post</label>
+                <input type="text" id="post" onkeyup="policeValidation(this)" name="post" placeholder="Ofiicer's Post" required>
+                <span id="pname" class="new" style="color: red; font-size: small;"></span>
             </div>
         </div>
-        <div class="input-group">
-            <label for="district">District:</label><br>
-            <select id="district" name="district"  style="width: 460px;height: 40px;" >
+        <!-- <div class="input-group">
+            <label for="district">Name</label><br>
+            <select id="name" name="name"  style="width: 460px;height: 40px;" >
                 <option value="Kottayam">Kottayam</option>
               
             </select>
-        </div>
+        </div> -->
+        <div class="input-group">
+            <label for="phone">Name</label>
+            <input type="text" id="name" onkeyup="nameValidation(this)"  name="name" placeholder="Officer's name " required>
+            <span id="nname" class="new" style="color: red; font-size: small;"></span>
+          
+            </div>
          
         <div class="input-group">
-            <label for="phone">Phone Number</label>
-            <input type="phone" id="phn_no" onkeyup="mobValidation(this)" maxlength="10" name="phn_no" placeholder="Phone Number " required>
+            <label for="phone">Mobile</label>
+            <input type="phone" id="mobile" onkeyup="mobValidation(this)" maxlength="10" name="mobile" placeholder="Mobile Number " required>
             <span id="mob" class="new" style="color: red; font-size: small;"></span>
           
             </div>
-
+              
         <div class="input-group">
-            <label for="station_incharge">Station Incharge</label>
-            <input type="text" id="station_incharge" onkeyup="" name="station_incharge" placeholder="Inspector name" required>
-            <span id="crc" class="new" style="color: red; font-size: small;"></span>
-        </div>
-            
+          <label for="phone">Email-Id</label>
+          <input type="email" id="police_email" onkeyup="eValidation(this)" name="police_email" placeholder="Enter Email-Id " required>
+          <span id="email" class="new" style="color: red; font-size: small;"></span>
+        
+          </div>
+
+                   
 
        
        

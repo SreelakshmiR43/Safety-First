@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <!--<title> Responsiive Admin Dashboard | CodingLab </title>-->
     <link rel="stylesheet" href="styleA.css">
-    <title>STATION DISPLAY</title>
+    <title>Officers</title>
     <!-- Boxicons CDN Link -->
     <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -65,22 +65,23 @@ td {
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-box' ></i>
+            <i class='bx bx-list-ul' ></i>
             <span class="links_name">Category</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-list-ul' ></i>
+            <i class='bx bx-pie-chart-alt-2' ></i>
             <span class="links_name">Sub-Category</span>
           </a>
         </li>
         <li>
           <a href="#">
-            <i class='bx bx-box' ></i>
-            <span class="links_name">Settings</span>
+            <i class='bx bx-cog' ></i>
+            <span class="links_name">Setting</span>
           </a>
         </li>
+       
     
         <li class="log_out">
           <a href="logout.php">
@@ -113,23 +114,23 @@ td {
    <br>
    <br>
 
-    <a href="police_station_add.html" class="button" style = "position:relative; left:710px; top:1px;">Add Police Station</a>
+    <a href="police_officers_add.html" class="button" style = "position:relative; left:710px; top:1px;">Add Police Officers</a>
     <table style="width:75%" cellpadding="10" cellspacing="4" border="3" align="center">
               
               <tr>
                   <th>S.No </th>
-                  <th>Station Name</th>
-                  <th>District</th>
-                  <th>Station Incharge</th>
-                  <th>Phone Number</th>
-                  <th>Station Email</th>
+                  <th>Rank</th>
+                  <th>Post</th>
+                  <th>Name</th>
+                  <th>Mobile Number</th>
+                  <th>Police Officers Email</th>
                   <th>Delete</th>
                   <th>Edit</th>
                 
               </tr>
               <?php
               include 'config.php';
-              $query=mysqli_query($conn,"select * from tbl_police_station");
+              $query=mysqli_query($conn,"select * from tbl_police_officers");
               
 $cnt=1;
 while($row=mysqli_fetch_array($query))
@@ -137,21 +138,22 @@ while($row=mysqli_fetch_array($query))
 ?>                                  
               <tr>
                   <td><?php echo htmlentities($cnt);?></td>
-                  <td><?php echo htmlentities($row['station_name']);?></td>
-                  <td><?php echo htmlentities($row['district']);?></td>
-                  <td><?php echo htmlentities($row['station_incharge']);?></td>
-                  <td><?php echo htmlentities($row['phn_no']);?></td>
-                  <td><?php echo htmlentities($row['station_mail']);?></td>
+                  
+                  <td><?php echo htmlentities($row['rank']);?></td>
+                  <td><?php echo htmlentities($row['post']);?></td>
+                  <td><?php echo htmlentities($row['name']);?></td>
+                  <td><?php echo htmlentities($row['mobile']);?></td>
+                  <td><?php echo htmlentities($row['police_email']);?></td>
                   
                <td>
                <?php
-                    if($row['status']==1){
-                        echo '<p><a href="inactivate.php?id='.$row['station_id'].'$status=1">Disable</a></p>';
-                    }else{
-                        echo '<p><a href="activate.php?id='.$row['station_id'].'$status=0">Enable</a></p>';
-                    }
+                    // if($row['status']==1){
+                    //     echo '<p><a href="inactivate.php?id='.$row['station_id'].'$status=1">Disable</a></p>';
+                    // }else{
+                    //     echo '<p><a href="activate.php?id='.$row['station_id'].'$status=0">Enable</a></p>';
+                    // }
                     ?>
-               <td><a href="station_edit.php?station_id=<?php echo $row['station_id']?>">Edit</a></td>
+               <td><a href="officer_edit.php?police_id=<?php echo $row['police_id']?>">Edit</a></td>
               </tr>
                
               </tr>

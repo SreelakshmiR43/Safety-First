@@ -27,6 +27,12 @@ else{
       <span class="logo_name">Safety First</span>
     </div>
       <ul class="nav-links">
+      <li>
+          <a href="index.html" class="active">
+            <i class='bx bx-grid-alt' ></i>
+            <span class="links_name">Home</span>
+          </a>
+        </li>
         <li>
           <a href="#" class="active">
             <i class='bx bx-grid-alt' ></i>
@@ -37,6 +43,12 @@ else{
           <a href="policeadddisplay.php">
             <i class='bx bx-box' ></i>
             <span class="links_name">Police Station</span>
+          </a>
+        </li>
+        <li>
+          <a href="police_officers.php">
+            <i class='bx bx-box' ></i>
+            <span class="links_name">Police Officers</span>
           </a>
         </li>
         <li>
