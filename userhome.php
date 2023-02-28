@@ -43,6 +43,13 @@ if($_SESSION['email']){
             <span class="links_name">Register Complaint </span>
           </a>
         </li>
+
+        <li>
+          <a href="newsview.php">
+            <i class='bx bx-file' ></i>
+            <span class="links_name">News Platform</span>
+          </a>
+        </li>
         
         <li class="log_out">
           <a href="logout.php">

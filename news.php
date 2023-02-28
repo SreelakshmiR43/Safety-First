@@ -5,13 +5,13 @@ if(isset($_POST["submit"]))
 {
 
     $news_title = $_POST['news_title'];
-    $image=$_FILES["image"]["name"];
+    $i=$_FILES["images"]["name"];
     $newsdes = $_POST['newsdes'];
     $news_date = $_POST['news_date'];
   
-    move_uploaded_file($_FILES["image"]["tmp_name"],"image/".$_FILES["image"]["name"]);
+    move_uploaded_file($_FILES["images"]["tmp_name"],"newsimg/".$i);
     
-    $sql=mysqli_query($conn,"INSERT INTO tbl_news(`news_title`,`image`,`newsdes`,`news_date`) VALUES('$news_title', '$image', '$newsdes','$news_date')");
+    $sql=mysqli_query($conn,"INSERT INTO tbl_news(`news_title`,`image`,`newsdes`,`news_date`) VALUES('$news_title', '$i', '$newsdes','$news_date')");
 
     if($sql)
       {
@@ -177,7 +177,7 @@ body {
 		 </div>
 		 <div class="input-group">
 				<label for="upimg">Upload Image </label>
-				<input type="file" id="image" onkeyup="imgValidation(this)" name="image"  required>
+				<input type="file" id="image" onkeyup="imgValidation(this)" name="images"  required>
 				<span id="crc" class="new" style="color: red; font-size: small;"></span>
 			</div>
         <div class="input-group">
