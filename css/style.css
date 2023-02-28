@@ -8,7 +8,7 @@ img {
 **********************************
 */
 .nav {
-  background-color: #242526;
+  background-color: #d27727;
   width: 100vw;
   height: 7.5vh;
   overflow: hidden;
@@ -92,7 +92,7 @@ img {
 }
 
 .nav-grid--box--search--search--input {
-  background-color: #3A3B3C;
+  background-color: #dfe4e9;
   height: 4.3rem;
   width: 23rem;
   outline: none;
@@ -4876,7 +4876,7 @@ html {
 
 body {
   box-sizing: border-box;
-  background-color: #18191A;
+  background-color: #eaebec;
   overflow-x: hidden;
   /* Chrome, Edge, and Safari */
 }
