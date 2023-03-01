@@ -123,6 +123,7 @@ require_once("config.php");
                         echo '<p><a href="approve.php?id='.$row1['complaint_id'].'$status=0">Accept</a></p>';
                     }
                     ?>
+                    <a href='pdf.php?id=<?php echo $row1['complaint_id'] ?>' type="button" class="btn btn-primary">download</a>
                                       
                
                      </tr>  <?php
