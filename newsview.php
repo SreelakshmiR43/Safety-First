@@ -187,7 +187,8 @@
                                     
                                 <div class="post-con--reaction">
                                     <div id="guest_add_bottom_div">
-                                        <p style="font-size: 15px;">'.$row[3].'</p>
+                                        <p style="font-size: 20px; color: #fcfcfcfc;
+                                        font-weight: 300; text-align:left;">'.$row[3].'</p>
                                     </div> 
                                 </div>
                             </div>

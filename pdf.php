@@ -50,7 +50,6 @@ $pdf->Cell(60,30,'           SAFETY FIRST-Complaint Details ');
             $pdf->Cell(45,5,'Crime Type :',0,0,'C');
             $pdf->Cell(45,5,$row['crime_type'],1,0);
             $pdf->Ln(30);
-          
             $pdf->Cell(45,5,'Description :',0,0,'C');
             $pdf->Cell(45,5,$row['description'],1,0);
             $pdf->Cell(45,5,'crime place :',0,0,'C');
