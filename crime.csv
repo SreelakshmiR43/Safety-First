@@ -1,0 +1,45 @@
+Crime Type,Location,Number of Crimes,Latitude,Longitude,Date,Time,Location Type,Severity,Description
+Robbery,Kanjirappally,10,9.5959,76.7724,1/1/2022,8:30,Commercial,Major,Armed robbery at a jewelry store
+Assault,Kanjirappally,15,9.5852,76.7767,1/3/2022,17:45,Residential,Minor,Verbal altercation leading to a physical fight
+Burglary,Kanjirappally,7,9.6037,76.7879,1/6/2022,3:15,Residential,Moderate,Unoccupied house broken into and robbed
+Theft,Kanjirappally,21,9.6006,76.7719,1/8/2022,12:00,Public,Minor,Pickpocketing reported at a local fair
+Assault,Kottayam,18,9.5923,76.5205,1/12/2022,21:30,Commercial,Major,A group of men assault a shopkeeper
+Burglary,Kottayam,9,9.5935,76.5389,1/16/2022,4:30,Residential,Minor,Break-in at a private residence
+Robbery,Kanjirappally,8,9.5986,76.7763,1/19/2022,9:15,Public,Moderate,Robbery at a bus stop
+Theft,Kottayam,12,9.5941,76.5214,1/21/2022,15:30,Commercial,Minor,Shoplifting at a retail store
+Assault,Kottayam,22,9.5976,76.5393,1/23/2022,20:45,Public,Major,A group of people involved in a brawl
+Burglary,Kottayam,14,9.5838,76.5287,1/26/2022,6:45,Residential,Moderate,Break-in at a rented apartment
+Robbery,Kanjirappally,6,9.5857,76.7687,1/30/2022,12:30,Commercial,Minor,Theft of cash and valuables from a shop
+Theft,Kottayam,10,9.6002,76.5169,2/3/2022,11:00,Public,Minor,Mobile phone theft reported at a park
+Robbery,Kanjirappally,10,9.5959,76.7724,1/1/2022,8:30,Commercial,Major,Armed robbery at a jewelry store
+Assault,Kanjirappally,15,9.5852,76.7767,1/3/2022,17:45,Residential,Minor,Verbal altercation leading to a physical fight
+Burglary,Kanjirappally,7,9.6037,76.7879,1/6/2022,3:15,Residential,Moderate,Unoccupied house broken into and robbed
+Theft,Kanjirappally,21,9.6006,76.7719,1/8/2022,12:00,Public,Minor,Pickpocketing reported at a local fair
+Vandalism,Kanjirappally,5,9.599,76.7813,1/10/2022,6:45,Public,Minor,Graffiti reported on public property
+Fraud,Kanjirappally,2,9.5838,76.7795,1/12/2022,14:30,Commercial,Major,Credit card fraud reported at a local business
+Assault,Kanjirappally,8,9.5871,76.7772,1/14/2022,22:15,Public,Moderate,Physical altercation at a local bar
+Robbery,Kanjirappally,12,9.6021,76.7807,1/16/2022,5:00,Commercial,Major,Armed robbery at a gas station
+Theft,Kanjirappally,4,9.5974,76.7771,1/18/2022,10:30,Public,Minor,Bike theft reported at a local park
+Assault,Kanjirappally,6,9.5885,76.7718,1/20/2022,16:45,Residential,Moderate,Domestic dispute turned violent
+Burglary,Kanjirappally,9,9.5938,76.7682,1/22/2022,1:15,Residential,Major,House broken into and robbed
+Assault,Kanjirappally,1,9.605184,76.767977,1/1/2022,19:07,Public,Minor,A man was punched in the face outside a bar
+Theft,Kanjirappally,1,9.586264,76.778822,1/1/2022,22:20,Residential,Minor,A bicycle was stolen from outside a house
+Burglary,Kanjirappally,1,9.597559,76.769157,1/2/2022,1:58,Residential,Major,A house was broken into and several valuable items were stolen
+Robbery,Kanjirappally,1,9.606287,76.774626,1/2/2022,10:30,Commercial,Major,A jewelry store was robbed at gunpoint
+Assault,Kanjirappally,1,9.604641,76.765952,1/2/2022,16:22,Public,Moderate,A physical altercation broke out between two groups of people in a park
+Theft,Kanjirappally,1,9.600027,76.770139,1/3/2022,8:15,Public,Minor,A purse was stolen from a woman's shopping cart in a supermarket
+Robbery,Kanjirappally,1,9.587914,76.778011,1/3/2022,14:00,Commercial,Major,A bank was robbed by a group of armed men
+Assault,Kanjirappally,1,9.595414,76.775715,1/3/2022,21:50,Residential,Moderate,A physical altercation broke out between two neighbors over a parking spot
+Theft,Kanjirappally,1,9.59542,76.780844,1/4/2022,11:30,Public,Minor,A phone was stolen from a woman's purse in a crowded market
+Burglary,Kanjirappally,1,9.601988,76.786758,1/4/2022,23:45,Residential,Major,A house was broken into while the owners were away on vacation
+Assault,Kanjirappally Junction,5,9.5766,76.8383,1/1/2022,8:00,Street,High,A group of people were involved in a physical altercation
+Assault,Pala,3,9.7221,76.6946,2/3/2022,19:45,Store,High,A convenience store was robbed at gunpoint
+Assault,Erattupetta,2,9.6942,76.7739,3/7/2022,3:30,Residential,Medium,A house was broken into and valuables were stolen
+Assault,Mundakayam,1,9.6418,76.8109,4/12/2022,22:15,Public,Low,A public property was vandalized with graffiti
+Assault,Kanjirappally,4,9.5631,76.8094,5/19/2022,14:00,Residential,Medium,A laptop was stolen from a parked car
+Assault,Ponkunnam,6,9.7195,76.7799,6/21/2022,10:30,Street,High,A group of people were involved in a physical altercation
+Assault,Pala,2,9.7221,76.6946,7/4/2022,21:00,Store,High,A jewelry store was robbed at gunpoint
+Assault,Kanjirappally Junction,1,9.5766,76.8383,8/9/2022,5:00,Store,Low,A convenience store was broken into and cash was stolen
+Assault,Erattupetta,3,9.6942,76.7739,9/15/2022,1:30,Public,Medium,Graffiti was sprayed on the walls of a public property
+Assault,Mundakayam,2,9.6418,76.8109,10/22/2022,16:00,Street,Low,A purse was stolen from a pedestrian
+Assault,Kanjirappally,4,9.5631,76.8094,11/28/2022,12:00,Residential,High,A physical altercation between family members

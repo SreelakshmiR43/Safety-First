@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+      <title>Add Vehicle Information</title>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <link rel="stylesheet" href="add_vehicle.css">
+      <link rel="stylesheet" href="styleA.css">
+      <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+          </head>
+          <style>
+            * {
+          padding:0;
+          margin:0;
+          box-sizing: border-box;
+         font-family: 'Poppins', sans-serif;
+        }
+        body {
+         
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh;
+          background-color: #fff;
+        }
+        
+        #create-account-form {
+             width: 1300px;
+            height: 900px; 
+            padding:24px;
+          background-color: #fff;
+        }
+        
+        .title {
+          margin-bottom: 20px;
+          font-size: 20x;
+          font-weight: bold;
+          position: relative;
+          padding: 60px 0 ;
+          height: 100px;
+         
+        }
+        
+        .input-group {
+          margin:15px 0; 
+          position:relative;
+         }
+        
+        .input-group label {
+          display:inline-block;
+          margin-bottom: 5px;
+        }
+        
+        .input-group input {
+          display:block;
+          width: 700px;
+          padding:10px;   
+        }
+        
+        
+        .btn {
+           width: 100px;;
+           padding:5px;
+           font-size: 20px;
+           background-color: orange;
+           color:#fff;
+           text-transform: uppercase;
+           border:none;
+        }
+        </style>
+    <body>
+        <div class="sidebar">
+            <div class="logo-details">
+              <i class='bx bxl-c-plus-plus'></i>
+              <span class="logo_name">Safety First</span>
+            </div>
+            <ul class="nav-links">
+              <li>
+                <a href="index.html" class="active">
+                  <i class='bx bx-grid-alt' ></i>
+                  <span class="links_name">Home</span>
+                </a>
+              </li>
+                <li>
+                  <a href="#" class="active">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Dashboard</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="police_station_add.html">
+                    <i class='bx bx-box' ></i>
+                    <span class="links_name">Police Station</span>
+                  </a>
+                </li>
+                <li>
+                    <a href="police_station_add.html">
+                      <i class='bx bx-box' ></i>
+                      <span class="links_name">Police Officers</span>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class='bx bx-box' ></i>
+                      <span class="links_name">Add Vehicle(Fine) </span>
+                    </a>
+                  </li>
+                <!-- <li>
+                  <a href="#">
+                    <i class='bx bx-list-ul' ></i>
+                    <span class="links_name">Category</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i class='bx bx-pie-chart-alt-2' ></i>
+                    <span class="links_name">Sub-Category</span>
+                  </a>
+                </li> -->
+                <li>
+                    <a href="#">
+                      <i class='bx bx-cog' ></i>
+                      <span class="links_name">Settings</span>
+                    </a>
+                  </li>
+            
+                <li class="log_out">
+                  <a href="logout.php">
+                    <i class='bx bx-log-out'></i>
+                    <span class="links_name">Log out</span>
+                  </a>
+                </li>
+              </ul>
+          </div>
+      <section class="home-section">
+        <nav>
+          <div class="sidebar-button">
+            <i class='bx bx-menu sidebarBtn'></i>
+            <span class="dashboard">Dashboard</span>
+          </div>
+          <div class="search-box">
+            <input type="text" placeholder="Search">
+            <i class='bx bx-search' ></i>
+          </div>
+          <div class="profile-details">
+            <img src="images/profile/profileuser.png"   >
+            <span class="admin_name">Admin</span>
+            </div>
+        </nav>
+        
+      <!-- <h1 style="text-align: center;margin-top: auto;">Vehicle Information</h1>
+           -->
+      <div class="form-group">
+                
+       <br><br><br><br> <h1 style="text-align: center;margin-top: auto;">Vehicle Information</h1>
+        
+      </div>
+      <form method="post" action="vehicle_display.php" style=" margin: 0; padding: 50px;">
+        <div class="form-container">
+          <div class="form-box">
+                     
+            <div class="form-group">
+                
+              <label for="registration-number">Registration Number:</label>
+              <input type="text" id="registration_number" name="registration-number" required>
+            </div>
+            <div class="form-group">
+              <label for="owner-name">Owner Name:</label>
+              <input type="text" id="owner_name" name="owner-name" required>
+            </div>
+            <div class="form-group">
+              <label for="owner-address">Owner Address:</label>
+              <textarea id="owner_address" name="owner-address"></textarea>
+            </div>
+            <div class="form-group">
+              <label for="amount">Amount:</label>
+              <input type="text" id="amount" name="amount" required>
+            </div>
+          </div>
+          <div class="form-box">
+            <div class="form-group">
+           <label for="chargememo-id">Charge Memo ID:</label>
+              <input type="text" id="chargememo_id" name="chargememo-id" required>
+            </div>
+            <div class="form-group">
+              <label for="offence-date">Offence Date:</label>
+              <input type="date" id="offence_date" name="offence-date" required>
+            </div>
+            <div class="form-group">
+              <label for="location">Location:</label>
+              <input type="text" id="location" name="location" required>
+            </div>
+            <div class="form-group">
+              <label for="sec-name">Section Name:</label>
+              <input type="text" id="sec_name" name="sec-name" required>
+            </div>
+            <div class="form-group">
+              <label for="offence-description">Offence Description:</label>
+              <textarea id="offence_description" name="offence-description"></textarea>
+            </div>
+            <input  type="submit" name="submit"  value="Add Vehicle">
+          </div>
+          
+        </div>
+        
+      </form>
+     
+    </body>
+  </html>
+  
