@@ -68,19 +68,19 @@
            border:none;
         }
         </style>
-    <body>
-        <div class="sidebar">
+        <body>
+          <div class="sidebar">
             <div class="logo-details">
               <i class='bx bxl-c-plus-plus'></i>
-              <span class="logo_name">Safety First</span>
+              <span class="logo_name">True Crime</span>
             </div>
-            <ul class="nav-links">
+              <ul class="nav-links">
               <li>
-                <a href="index.html" class="active">
-                  <i class='bx bx-grid-alt' ></i>
-                  <span class="links_name">Home</span>
-                </a>
-              </li>
+                  <a href="index.html" class="active">
+                    <i class='bx bx-grid-alt' ></i>
+                    <span class="links_name">Home</span>
+                  </a>
+                </li>
                 <li>
                   <a href="#" class="active">
                     <i class='bx bx-grid-alt' ></i>
@@ -88,41 +88,35 @@
                   </a>
                 </li>
                 <li>
-                  <a href="police_station_add.html">
-                    <i class='bx bx-box' ></i>
-                    <span class="links_name">Police Station</span>
+                  <a href="complaintview.php">
+                    <i class='bx bx-file' ></i>
+                    <span class="links_name">View Complaint</span>
                   </a>
                 </li>
                 <li>
-                    <a href="police_station_add.html">
-                      <i class='bx bx-box' ></i>
-                      <span class="links_name">Police Officers</span>
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#">
-                      <i class='bx bx-box' ></i>
-                      <span class="links_name">Add Vehicle(Fine) </span>
-                    </a>
-                  </li>
-                <!-- <li>
-                  <a href="#">
-                    <i class='bx bx-list-ul' ></i>
-                    <span class="links_name">Category</span>
+                  <a href="firdisplay.php">
+                    <i class='bx bx-file' ></i>
+                    <span class="links_name">FIR</span>
                   </a>
                 </li>
                 <li>
-                  <a href="#">
-                    <i class='bx bx-pie-chart-alt-2' ></i>
-                    <span class="links_name">Sub-Category</span>
+                  <a href="crimedetailsdisplay.php">
+                    <i class='bx bx-file' ></i>
+                    <span class="links_name">Crime Details</span>
                   </a>
-                </li> -->
+                </li>
                 <li>
-                    <a href="#">
-                      <i class='bx bx-cog' ></i>
-                      <span class="links_name">Settings</span>
-                    </a>
-                  </li>
+                  <a href="newsadddisplay.php">
+                    <i class='bx bx-file' ></i>
+                    <span class="links_name">News</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="vehicle_display.php">
+                    <i class='bx bx-file' ></i>
+                    <span class="links_name">Add Vehicle Fine</span>
+                  </a>
+                </li>
             
                 <li class="log_out">
                   <a href="logout.php">
@@ -132,30 +126,31 @@
                 </li>
               </ul>
           </div>
-      <section class="home-section">
-        <nav>
-          <div class="sidebar-button">
-            <i class='bx bx-menu sidebarBtn'></i>
-            <span class="dashboard">Dashboard</span>
-          </div>
-          <div class="search-box">
-            <input type="text" placeholder="Search">
-            <i class='bx bx-search' ></i>
-          </div>
-          <div class="profile-details">
-            <img src="images/profile/profileuser.png"   >
-            <span class="admin_name">Admin</span>
-            </div>
-        </nav>
-        
+          <section class="home-section">
+            <nav>
+              <div class="sidebar-button">
+                <i class='bx bx-menu sidebarBtn'></i>
+                <span class="dashboard">Dashboard</span>
+              </div>
+              <div class="search-box">
+                <input type="text" placeholder="Search">
+                <i class='bx bx-search' ></i>
+              </div>
+              <div class="profile-details">
+                <img src="images/profile/profileuser.png" alt="">
+                <span class="admin_name">Police Station</span>
+                <i class='bx bx-chevron-down' ></i>
+              </div>
+            </nav>
+    
       <!-- <h1 style="text-align: center;margin-top: auto;">Vehicle Information</h1>
            -->
-      <div class="form-group">
+      <!-- <div class="form-group">
                 
        <br><br><br><br> <h1 style="text-align: center;margin-top: auto;">Vehicle Information</h1>
         
-      </div>
-      <form method="post" action="vehicle_display.php" style=" margin: 0; padding: 50px;">
+      </div> -->
+      <!-- <form method="post" action="vehicle_display.php" style=" margin: 0; padding: 50px;">
         <div class="form-container">
           <div class="form-box">
                      
@@ -203,7 +198,154 @@
           
         </div>
         
+      </form> -->
+      <br><br><br><br> <form action="add_vehicle.php" method="post" onsubmit="return validateForm()">
+        <h2>Enter Vehicle Fine Details</h2>
+        <label for="vehicle-registration-number">Vehicle Registration Number:</label>
+        <input type="text" id="registration_number" onkeyup="vehicleRegistrationNumberInput(this)" name="registration_number" required>
+        <span id="vehicleregistration-number" class="new" style="color: red; font-size: small;"></span>
+        <br>
+        <label for="fine-amount">Fine Amount:</label>
+        <input type="number" id="amount" name="amount" required>
+        <br>
+        <label for="offense-type">Offence Type:</label>
+        <select id="offense_type" name="offence_type" required>
+          <option value="">Select Offense Type</option>
+          <option value="speeding">Speeding</option>
+          <option value="parking">Illegal Parking</option>
+          <option value="overtaking">Illegal Overtaking</option>
+          <option value="driving-license">Driving Without License</option>
+        </select>
+        <br>
+        <label for="fine-date">Fine Date:</label>
+        <input type="date" id="fine_date" name="fine_date" required>
+        <br>
+        <label for="fine-time">Fine Time:</label>
+        <input type="time" id="fine_time" name="fine_time" value="00:00:00"required>
+        <br>
+        <label for="owner-name">Owner Name:</label>
+        <input type="text" id="owner_name" name="owner_name" required>
+        <br>
+        <label for="owner-contact">Owner Contact Number:</label>
+        <input type="tel" id="owner_contact" name="owner_contact" required>
+        <br>
+        <label for="owner-email">Owner Email:</label>
+        <input type="email" id="owner_email" name="owner_email" required>
+        <br>
+        <label for="owner-address">Owner Address:</label>
+        <textarea id="owner_address" name="owner_address" rows="3" cols="30" required></textarea>
+        <br>
+        <input type="submit" id="button"  name="submit" value="Submit">
       </form>
+      <script>
+        const form = document.querySelector('form');
+const vehicleRegistrationNumberInput = document.querySelector('#vehicle-registration-number');
+const fineAmountInput = document.querySelector('#fine-amount');
+const offenseTypeInput = document.querySelector('#offense-type');
+const fineDateInput = document.querySelector('#fine-date');
+const fineTimeInput = document.querySelector('#fine-time');
+const ownerNameInput = document.querySelector('#owner-name');
+const ownerContactInput = document.querySelector('#owner-contact');
+const ownerEmailInput = document.querySelector('#owner-email');
+const ownerAddressInput = document.querySelector('#owner-address');
+
+vehicleRegistrationNumberInput.addEventListener('input', () => {
+  const regex = /^[K][L][-][0-9]{2}[-][A-Z]{1,2}[-][0-9]{4}$/;
+  if (!vehicleRegistrationNumberInput.value) {
+    vehicleRegistrationNumberInput.setCustomValidity('Vehicle registration number is required');
+  } else if (!regex.test(vehicleRegistrationNumberInput.value)) {
+    vehicleRegistrationNumberInput.setCustomValidity('Please enter a valid vehicle registration number in the format KL-XX-NNNN');
+  } else {
+    vehicleRegistrationNumberInput.setCustomValidity('');
+  }
+});
+
+// vehicleRegistrationNumberInput.addEventListener('input', () => {
+//   const regex = /^[K][L][-][A-Z]{2}[-][0-9]{4}$/;
+//   if (!regex.test(vehicleRegistrationNumberInput.value)) {
+//     vehicleRegistrationNumberInput.setCustomValidity('Invalid vehicle registration number format. Please enter in KL-XX-YYYY format.');
+//   } else {
+//     vehicleRegistrationNumberInput.setCustomValidity('');
+//   }
+// });
+
+fineAmountInput.addEventListener('input', () => {
+  if (!fineAmountInput.value) {
+    fineAmountInput.setCustomValidity('Fine amount is required');
+  } else if (fineAmountInput.value < 0) {
+    fineAmountInput.setCustomValidity('Fine amount cannot be negative');
+  } else {
+    fineAmountInput.setCustomValidity('');
+  }
+});
+
+offenseTypeInput.addEventListener('input', () => {
+  if (!offenseTypeInput.value) {
+    offenseTypeInput.setCustomValidity('Offense type is required');
+  } else {
+    offenseTypeInput.setCustomValidity('');
+  }
+});
+
+fineDateInput.addEventListener('input', () => {
+  if (!fineDateInput.value) {
+    fineDateInput.setCustomValidity('Fine date is required');
+  } else {
+    fineDateInput.setCustomValidity('');
+  }
+});
+
+fineTimeInput.addEventListener('input', () => {
+  if (!fineTimeInput.value) {
+    fineTimeInput.setCustomValidity('Fine time is required');
+  } else {
+    fineTimeInput.setCustomValidity('');
+  }
+});
+
+ownerNameInput.addEventListener('input', () => {
+  if (!ownerNameInput.value) {
+    ownerNameInput.setCustomValidity('Owner name is required');
+  } else {
+    ownerNameInput.setCustomValidity('');
+  }
+});
+
+ownerContactInput.addEventListener('input', () => {
+  if (!ownerContactInput.value) {
+    ownerContactInput.setCustomValidity('Owner contact number is required');
+  } else {
+    ownerContactInput.setCustomValidity('');
+  }
+});
+
+ownerEmailInput.addEventListener('input', () => {
+  if (!ownerEmailInput.value) {
+    ownerEmailInput.setCustomValidity('Owner email is required');
+  } else if (!/\S+@\S+\.\S+/.test(ownerEmailInput.value)) {
+    ownerEmailInput.setCustomValidity('Invalid email format');
+  } else {
+    ownerEmailInput.setCustomValidity('');
+  }
+});
+
+ownerAddressInput.addEventListener('input', () => {
+  if (!ownerAddressInput.value) {
+    ownerAddressInput.setCustomValidity('Owner address is required');
+  } else {
+    ownerAddressInput.setCustomValidity('');
+  }
+});
+
+form.addEventListener('submit', (event) => {
+  if (!form.checkValidity()) {
+    event.preventDefault();
+  }
+  form.classList.add('was-validated');
+});
+
+      </script>
+ 
      
     </body>
   </html>

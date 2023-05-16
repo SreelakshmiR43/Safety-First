@@ -1,4 +1,4 @@
-body {
+/* body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
@@ -91,4 +91,86 @@ body {
   .form-box:last-of-type input[type="submit"] {
     float: right;
   }
+   */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   form {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  input[type="text"],
+  input[type="number"],
+  select,
+  input[type="date"],
+  input[type="time"],
+  input[type="tel"],
+  input[type="email"],
+  textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    font-family: 'Helvetica Neue', sans-serif;
+  }
+  
+  input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+  }
+  
+  input[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+
+/* Change color of error message to red */
+input:invalid {
+  color: red;
+}
+
+/* Change color of valid message to green */
+input:valid {
+  color: green;
+}
+
+
   
